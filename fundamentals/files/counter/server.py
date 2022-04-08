@@ -15,7 +15,10 @@ def destroy():
     session.clear()
     return redirect('/')
 
-
+@app.route('/down')
+def down():
+    session['count'] -= 1
+    return render_template('index.html')
 
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
