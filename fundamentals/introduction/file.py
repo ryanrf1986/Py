@@ -83,4 +83,20 @@ Bonus section
 # print(person['favorite_team'])
 # print(pizza_toppings[7])
 #   print(boolean)
-# fruit.append('raspberry')
+# fruit.append('raspberry')<table>
+            {% for i in range(4): %}
+                <tr>
+                    {% for j in range(4): %}
+                    <td class = color1></td>
+                    <td class = color2></td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for j in range(4): %}
+                    <td class = color2></td>
+                    <td class = color1></td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            
+        </table>
