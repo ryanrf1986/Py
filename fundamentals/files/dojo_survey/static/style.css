@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 50px;
+}
+
+.page_container{
+    width: 620px;
+    height:620px;
+    background-color:slategray;
+    padding-top:15px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color:darkgoldenrod;
+}
+
+form{
+    width: 600px;
+    height: 500px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.name, .location, .languages{
+    display: flex;
+    justify-content: space-between;
+    margin:10px 0;
+}
+
+input, select{
+    width: 300px;
+}
