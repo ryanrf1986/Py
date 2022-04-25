@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='template.css') }}">
+    <title>Document</title>
+</head>
+<body><div class="index_container">
+    <div class="register">
+    <h1>Register</h1>
+        <form action="/register/user" method = "post">
+            <label for="first_name">First Name</label>
+            <input type="text" placeholder="first name" id="first_name" name="first_name">
+            <br />
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name">
+            <br />
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <br />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <br />
+            <label for="verify_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+            <br />
+            <button type="submit">Register</button>
+        </form>
+        </div>
+
+        <div class="login">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <br />
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Login</button>
+
+            </form>
+
+        </div>
+        {% with messages = get_flashed_messages() %}    
+        {% if messages %}                        
+            {% for message in messages %}     
+                <p>{{message}}</p>          
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        </div>
+</body>
+</html>

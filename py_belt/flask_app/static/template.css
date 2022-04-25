@@ -1,0 +1,31 @@
+.index_container{
+    display: flex;
+    width: auto;
+}
+
+.register{
+    display: block;
+    width: 186px;
+    height: auto;
+}
+
+.login{
+    display:block;
+    height: auto;
+    width: 180px;
+}
+
+.top_nav{
+    
+    display: flex;
+    }
+
+.top_nav_buttons{
+    position: absolute;
+    right: 300px;
+    padding: 40px 0;
+}
+
+.rowstyled{
+    border: 1px solid black;
+}

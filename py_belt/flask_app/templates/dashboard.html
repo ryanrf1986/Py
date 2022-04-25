@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='template.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top_nav">
+       <h1> Welcome {{session['first_name']}}&nbsp{{session['last_name']}}! </h1>
+       
+       <div class="top_nav_buttons">
+        <a href="/new">Add painting</a>
+       <!-- <a href="/edit/user/{{session['user_id']}}">account</a>&nbsp&nbsp -->
+       <a href="/logout"><button>logout</button></a>
+        </div>
+    </div>
+
+<h2>Paintings</h2>
+<tbody>
+    {%for painting in paintings%}
+    <tr>
+        <td><a href="/show/{{painting.id}}">{{painting.title}}</a> added by {{painting.first_name}} {{painting.last_name}}</td>
+        <td><a href="/delete/{{painting.id}}">Delete</a></td>
+        <td><a href="/edit/{{painting.id}}">Edit</a></td> <br>
+    </tr>
+    {%endfor%}
+</tbody>
+</table>
+    
+</body>
+</html>

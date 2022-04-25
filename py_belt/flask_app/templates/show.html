@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='belt_exam.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top_nav">
+       <!-- <h1>Welcome {{session['first_name']}} </h1> -->
+       
+       <div class="top_nav_buttons">
+        <a href="/new">Add Painting</a>&nbsp&nbsp
+        <a href="/dashboard">Dashboard</a>&nbsp&nbsp
+       <!-- <a href="/edit/user/{{session['user_id']}}">account</a>&nbsp&nbsp -->
+       <a href="/logout"><button>logout</button></a>
+    </div>
+
+</div>
+<h1>{{paintings.title}}</h1>
+<p> <strong>Painted by:</strong> {{paintings.first_name}} {{paintings.last_name}}</p>
+<p> <strong>Description:</strong><br />{{paintings.description}}</p>
+<p> <strong>Price:</strong><br />{{paintings.price}}</p>
+</body>
+</html>
