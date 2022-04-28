@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='template.css') }}">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="top_nav">
+       <!-- <h1>Welcome {{session['first_name']}} </h1> -->
+       F
+       <div class="top_nav_buttons">
+        <a href="/products">Add Product</a>&nbsp&nbsp
+        <a href="/index">Home</a>&nbsp&nbsp
+       <!-- <a href="/edit/user/{{session['user_id']}}">account</a>&nbsp&nbsp -->
+       <a href="/logout"><button>logout</button></a>
+    </div>
+
+</div>
+<h1>{{orders.id}}</h1>
+<p> <strong>Order:</strong> {{products.product_name}} {{products.sku}}</p>
+<p> <strong>Description:</strong><br />{{products.type}}</p>
+<p> <strong>Price:</strong><br />{{products.price}}</p>
+<p> <strong>Total:</strong><br />{{orders.total}}</p>
+</body>
+</html>
